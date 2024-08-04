@@ -9,10 +9,10 @@ router.post('/createnew', async (req, res) => {
     // * response = { status, message }
     try {
 
-        const { name, value, type, date, total } = req.body;
+        const { name, value, type, date, total, spendingtype } = req.body;
 
         const insertBody = {
-            name, value, type, date, total
+            name, value, type, date, total, spendingtype
         }
 
         const { data, error } = await supabase
